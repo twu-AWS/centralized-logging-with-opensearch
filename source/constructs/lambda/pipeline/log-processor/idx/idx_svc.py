@@ -71,7 +71,7 @@ opensearch_util = OpenSearchUtil(
     region=default_region,
     endpoint=endpoint,
     index_prefix=index_prefix,
-    log_type=log_type,
+    log_type=log_type
 )
 
 

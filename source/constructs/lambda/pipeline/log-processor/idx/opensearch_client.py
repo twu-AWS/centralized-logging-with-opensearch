@@ -228,7 +228,7 @@ class OpenSearchUtil:
 
         data = data.replace("%%INDEX%%", self._index_alias, -1)
 
-        headers = {"osd-xsrf": "true", "securitytenant": DEFAULT_TENANT}
+        headers = {"osd-xsrf": "true", "kbn-xsrf": "true", "securitytenant": DEFAULT_TENANT}
 
         path = "_dashboards/api/saved_objects/_import?overwrite=true"
 
