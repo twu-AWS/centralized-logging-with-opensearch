@@ -10,7 +10,7 @@ import gzip
 import base64
 from datetime import datetime, date
 from botocore.exceptions import ClientError
-from idx.opensearch_client import OpenSearchUtil
+from idx.opensearch_client import OpenSearchUtil,Engine
 from commonlib.exception import APIException, ErrorCode
 
 
@@ -71,7 +71,8 @@ opensearch_util = OpenSearchUtil(
     region=default_region,
     endpoint=endpoint,
     index_prefix=index_prefix,
-    log_type=log_type
+    log_type=log_type,
+    engine = Engine(engine_type)
 )
 
 
